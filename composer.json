@@ -1,0 +1,29 @@
+{
+    "name": "aheadlabs/wpcli-site-backup",
+    "description": "WP CLI package for managing backups.",
+    "type": "wp-cli-package",
+    "homepage": "https://github.com/aheadlabs/wpcli-site-backup",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Iván Sainz",
+            "homepage": "http://ivansainz.es"
+        },
+        {
+            "name": "Alberto Carbonell"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "files": [
+            "site-backup-command.php"
+        ]
+    },
+    "require": {
+        "wp-cli/wp-cli": "^2.4.0"
+    },
+    "require-dev": {
+        "behat/behat": "~2.5"
+    }
+}
