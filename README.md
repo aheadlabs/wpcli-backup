@@ -6,7 +6,7 @@
 [![GitHub SemVer tag](https://img.shields.io/github/v/tag/aheadlabs/wpcli-site-backup)](https://github.com/aheadlabs/wpcli-site-backup/tags)
 [![Repo size](https://img.shields.io/github/repo-size/aheadlabs/wpcli-site-backup)](https://github.com/aheadlabs/wpcli-site-backup)
 [![Top language](https://img.shields.io/github/languages/top/aheadlabs/wpcli-site-backup)](https://github.com/aheadlabs/wpcli-site-backup)
-[![License](https://img.shields.io/github/license/aheadlabs/wpcli-site-backup)](https://github.com/aheadlabs/wpcli-site-backup/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/aheadlabs/wpcli-site-backup)](https://github.com/aheadlabs/wpcli-site-backup/blob/master/LICENSE)  
 [![Liberapay](https://img.shields.io/liberapay/receives/ahead-labs?logo=liberapay)](https://es.liberapay.com/ahead-labs/)
 [![Donate Liberapay](https://img.shields.io/badge/donate-Liberapay-yellow)](https://liberapay.com/ahead-labs/donate)
 [![Donate PayPal](https://img.shields.io/badge/donate-PayPal-yellow.svg)](https://www.paypal.me/aheadlabs)
