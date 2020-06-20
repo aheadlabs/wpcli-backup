@@ -1,0 +1,9 @@
+steps:
+  - task: CmdLine@2
+    displayName: Show PHP version
+    inputs:
+      script: 'php --version'
+  - task: CmdLine@2
+    displayName: Composer install
+    inputs:
+      script: composer install --no-interaction --prefer-dist
