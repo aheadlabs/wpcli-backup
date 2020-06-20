@@ -57,5 +57,5 @@ jobs:
       displayName: Decompress devops-toolset
       inputs:
         archiveFilePatterns: '$(System.DefaultWorkingDirectory)/.devops/devops-toolset.zip'
-        destinationFolder: '$(System.DefaultWorkingDirectory)/.devops/devops-toolset'
+        destinationFolder: '$(System.DefaultWorkingDirectory)/.devops'
         cleanDestinationFolder: true
