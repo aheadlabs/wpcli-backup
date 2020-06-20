@@ -26,4 +26,4 @@ jobs:
     - template: pipeline-template-python-setup.yml
     - template: pipeline-template-devops-toolset.yml
     - template: pipeline-template-project-info.yml
-    - template: pipeline-template-sonarcloud.yml
+    #- template: pipeline-template-sonarcloud.yml
