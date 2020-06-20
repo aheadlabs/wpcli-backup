@@ -58,4 +58,4 @@ jobs:
       inputs:
         archiveFilePatterns: '$(System.DefaultWorkingDirectory)/.devops/devops-toolset.zip'
         destinationFolder: '$(System.DefaultWorkingDirectory)/.devops'
-        cleanDestinationFolder: true
+        cleanDestinationFolder: false
