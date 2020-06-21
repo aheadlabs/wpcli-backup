@@ -1,17 +1,17 @@
 steps:
   - task: PythonScript@0
-    displayName: Download devops-toolset
+    displayName: Download script to download the toolset
     inputs:
       scriptSource: 'inline'
       script: |
         import requests
-        request = requests.get("https://github.com/aheadlabs/devops-toolset/archive/feature/pythonization.zip")
-        with open("$(System.DefaultWorkingDirectory)/.devops/devops-toolset.zip", "wb") as zip_file:
-          zip_file.write(request.content)
+        request = requests.get("https://raw.githubusercontent.com/aheadlabs/devops-toolset/feature/pythonization/toolset/download_devops-toolset.py")
+        with open("$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py", "w") as script:
+          script.write(request.content)
       failOnStderr: true
-  - task: ExtractFiles@1
-    displayName: Decompress devops-toolset
+  - task: PythonScript@0
+    displayName: Download the toolset
     inputs:
-      archiveFilePatterns: '$(System.DefaultWorkingDirectory)/.devops/devops-toolset.zip'
-      destinationFolder: '$(System.DefaultWorkingDirectory)/.devops'
-      cleanDestinationFolder: false
+      scriptSource: 'filePath'
+      scriptPath: '$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py'
+      arguments: '$(System.DefaultWorkingDirectory)/.devops/'
