@@ -7,6 +7,7 @@ steps:
         import requests
         request = requests.get("https://raw.githubusercontent.com/aheadlabs/devops-toolset/feature/pythonization/toolset/download_devops-toolset.py")
         with open("$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py", "w") as script:
+          print(request.content.decode("utf-8"))
           script.write(request.content.decode("utf-8"))
       failOnStderr: true
   - task: CmdLine@2
