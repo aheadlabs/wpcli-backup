@@ -17,4 +17,4 @@ steps:
     displayName: Download the toolset
     inputs:
       script: |
-        python3 $(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py $(System.DefaultWorkingDirectory)/.devops/ --branch=feature/pythonization
+        python3 $(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py "$(System.DefaultWorkingDirectory)/.devops/" --branch="feature/pythonization"
