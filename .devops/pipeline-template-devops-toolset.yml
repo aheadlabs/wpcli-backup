@@ -15,9 +15,3 @@ steps:
       scriptSource: 'filePath'
       scriptPath: '$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py'
       arguments: '$(System.DefaultWorkingDirectory)/.devops/ --branch=feature/pythonization'
-  - task: CmdLine@2
-    displayName: Tree file
-    inputs:
-      script: |
-        sudo apt-get install tree
-        tree $(System.DefaultWorkingDirectory)/.devops
