@@ -20,4 +20,4 @@ steps:
     inputs:
       script: |
         sudo apt-get install tree
-        tree $(System.DefaultWorkingDirectory)
+        tree $(System.DefaultWorkingDirectory)/.devops
