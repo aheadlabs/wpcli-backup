@@ -13,9 +13,8 @@ steps:
     displayName: Tree files
     inputs:
       script: tree $(System.DefaultWorkingDirectory)/.devops/
-  - task: PythonScript@0
+  - task: CmdLine@2
     displayName: Download the toolset
     inputs:
-      scriptSource: 'filePath'
-      scriptPath: '$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py'
-      arguments: '$(System.DefaultWorkingDirectory)/.devops/ --branch=feature/pythonization'
+      script: |
+        python3 $(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py $(System.DefaultWorkingDirectory)/.devops/ --branch=feature/pythonization
