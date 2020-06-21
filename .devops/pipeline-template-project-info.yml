@@ -7,13 +7,11 @@ steps:
         import tools.git
         tools.git.set_current_branch_simplified("$(Build.SourceBranch)", "CURRENT_BRANCH")
       failOnStderr: true
-      workingDirectory: $(System.DefaultWorkingDirectory)/.devops/devops-toolset-feature-pythonization/
   - task: PythonScript@0
     displayName: Parse project.xml
     inputs:
       scriptSource: 'inline'
       script: |
         import filesystem.paths
-        filesystem.paths.get_project_xml_data()
+        filesystem.paths.get_project_xml_data("$(System.DefaultWorkingDirectory)/project.xml")
       failOnStderr: true
-      workingDirectory: $(System.DefaultWorkingDirectory)/.devops/devops-toolset-feature-pythonization/
