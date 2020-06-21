@@ -9,6 +9,10 @@ steps:
         with open("$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py", "w") as script:
           script.write(request.content.decode("utf-8"))
       failOnStderr: true
+  - task: CmdLine@2
+    displayName: Tree files
+    inputs:
+      script: tree $(System.DefaultWorkingDirectory)/.devops/
   - task: PythonScript@0
     displayName: Download the toolset
     inputs:

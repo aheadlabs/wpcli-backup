@@ -22,15 +22,17 @@ jobs:
   - job: Main
     displayName: Main job
     steps:
+    - task: CmdLine@2
+      displayName: Install tree
+      inputs:
+        script: sudo apt-get install tree
     - template: pipeline-template-php-setup.yml
     - template: pipeline-template-python-setup.yml
     - template: pipeline-template-devops-toolset.yml
     - task: CmdLine@2
       displayName: Tree files
       inputs:
-        script: |
-          sudo apt-get install tree
-          tree /home/vsts/work/1/s/.devops/devops-toolset/
+        script: tree /home/vsts/work/1/s/.devops/devops-toolset/
     - template: pipeline-template-i18n.yml
     - template: pipeline-template-project-info.yml
     #- template: pipeline-template-sonarcloud.yml
