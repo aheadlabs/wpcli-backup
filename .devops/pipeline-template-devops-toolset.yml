@@ -5,17 +5,12 @@ steps:
       scriptSource: 'inline'
       script: |
         import requests
-        request = requests.get("https://raw.githubusercontent.com/aheadlabs/devops-toolset/feature/pythonization/toolset/download_devops-toolset.py")
+        request = requests.get("https://raw.githubusercontent.com/aheadlabs/devops-toolset/feature/pythonization/toolset/download_devops_toolset.py")
         with open("$(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py", "w") as script:
-          print(request.content.decode("utf-8"))
           script.write(request.content.decode("utf-8"))
       failOnStderr: true
-  - task: CmdLine@2
-    displayName: Tree files
-    inputs:
-      script: tree $(System.DefaultWorkingDirectory)/.devops/
   - task: CmdLine@2
     displayName: Download the toolset
     inputs:
       script: |
-        python3 $(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py "$(System.DefaultWorkingDirectory)/.devops/" --branch="feature/pythonization"
+        python3 $(System.DefaultWorkingDirectory)/.devops/download_devops_toolset.py $(System.DefaultWorkingDirectory)/.devops/ --branch=feature/pythonization
