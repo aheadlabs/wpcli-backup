@@ -13,5 +13,5 @@ steps:
       scriptSource: 'inline'
       script: |
         import filesystem.paths
-        filesystem.paths.get_project_xml_data("$(System.DefaultWorkingDirectory)/project.xml")
+        filesystem.paths.get_project_xml_data(project_xml_path="$(System.DefaultWorkingDirectory)/project.xml")
       failOnStderr: true
