@@ -27,4 +27,4 @@ jobs:
     - template: pipeline-template-devops-toolset.yml
     - template: pipeline-template-i18n.yml
     - template: pipeline-template-project-info.yml
-    #- template: pipeline-template-sonarcloud.yml
+    - template: pipeline-template-sonarcloud.yml
