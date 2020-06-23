@@ -1,2 +1,2 @@
 require:
-  - site-backup-command.php
+  - backup-commands.php

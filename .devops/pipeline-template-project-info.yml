@@ -12,6 +12,6 @@ steps:
     inputs:
       scriptSource: 'inline'
       script: |
-        import filesystem.paths
-        filesystem.paths.get_project_xml_data(project_xml_path="$(System.DefaultWorkingDirectory)/project.xml")
+        import project_types.php.parsers as parsers
+        parsers.parse_composer_json_data(composer_json_path="$(System.DefaultWorkingDirectory)/composer.json")
       failOnStderr: true
