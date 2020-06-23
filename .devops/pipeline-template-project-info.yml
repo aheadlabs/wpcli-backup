@@ -8,7 +8,7 @@ steps:
         tools.git.set_current_branch_simplified("$(Build.SourceBranch)", "CURRENT_BRANCH")
       failOnStderr: true
   - task: PythonScript@0
-    displayName: Parse project.xml
+    displayName: Parse composer.json
     inputs:
       scriptSource: 'inline'
       script: |
